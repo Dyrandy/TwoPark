@@ -10,6 +10,7 @@
   import mainHeader from './components/Header.vue';
   import mainFooter from './components/Footer.vue';
   import boardList from './components/board/boardList.vue';
+
 export default {
   components: {
       'mainHeader': mainHeader,

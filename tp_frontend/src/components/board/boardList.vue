@@ -26,13 +26,13 @@
 
 <style scoped>
   body{
-    width: 80%;
+    width: 100%;
     padding-left: 10%;
     padding-right: 10%;
   }
 
   .boardTable{
-    padding-top: 100px;
+    padding-top: 20%;
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #c7c7bc;

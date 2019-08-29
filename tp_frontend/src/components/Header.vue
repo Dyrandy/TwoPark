@@ -1,12 +1,13 @@
 <template>
   <header>
     <div class="wrapper">
-      <h1 href="">TwoPark</h1>
+      <h1><a href="">TwoPark</a></h1>
       <nav>
         <ul class = "menu">
           <li><a href="">About</a></li>
           <li><a href="">Board</a></li>
           <li><a href="">login</a></li>
+          <li><a href="">Register</a></li>
         </ul>
       </nav>
     </div>
@@ -20,17 +21,49 @@
 </script>
 
 <style scoped>
-  *{margin: 0; padding: 0;}
-  li{list-style: none;}
-  a{text-decoration: none;}
+  *{
+    margin-top: 0;
+  }
+  li{
+    list-style: none;
+  }
 
-  .wrapper{width: 1170px; margin: 0 auto;}
-  .clearfix{content: '';display: block; clear: both;}
+  a{
+    text-decoration: none;
+    color: white;
+  }
 
-  header{height: 75px; background-color:orangered; border: 1px solid white;
-    position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;}
-  h1{color: white; line-height: 75px;float:left;margin-left: 10px;}
-  .menu{float:right;}
-  .menu li{float:left;}
-  .menu a{line-height: 75px; color: white; padding: 0 15px; display: block;}
+  .wrapper{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  header{
+    width: 80%;
+    left: 10%;
+    height: 75px;
+    background-color:orangered;
+    position: fixed;
+    top: 5%;
+
+  }
+
+  h1{
+    color: white;
+    line-height: 75px;
+    float:left;
+    margin-left: 10px;
+  }
+  .menu{
+    float:right;
+  }
+  .menu li{
+    float:left;
+  }
+  .menu a{
+    line-height: 75px;
+    color: white;
+    padding: 0 15px;
+    display: block;
+  }
 </style>
