@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <mainHeader></mainHeader>
+    <boardList></boardList>
     <mainFooter></mainFooter>
   </div>
 </template>
@@ -8,10 +9,12 @@
 <script>
   import mainHeader from './components/Header.vue';
   import mainFooter from './components/Footer.vue';
+  import boardList from './components/board/boardList.vue';
 export default {
   components: {
       'mainHeader': mainHeader,
-      'mainFooter': mainFooter
+      'mainFooter': mainFooter,
+      'boardList': boardList
   }
 }
 </script>
