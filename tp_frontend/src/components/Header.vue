@@ -1,0 +1,36 @@
+<template>
+  <header>
+    <div class="wrapper">
+      <h1 href="">TwoPark</h1>
+      <nav>
+        <ul class = "menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Board</a></li>
+          <li><a href="">login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<script>
+    export default {
+        name: "main-header"
+    }
+</script>
+
+<style scoped>
+  *{margin: 0; padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none;}
+
+  .wrapper{width: 1170px; margin: 0 auto;}
+  .clearfix{content: '';display: block; clear: both;}
+
+  header{height: 75px; background-color:orangered; border: 1px solid white;
+    position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;}
+  h1{color: white; line-height: 75px;float:left;margin-left: 10px;}
+  .menu{float:right;}
+  .menu li{float:left;}
+  .menu a{line-height: 75px; color: white; padding: 0 15px; display: block;}
+</style>
