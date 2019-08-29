@@ -18,3 +18,11 @@ DataBase: MySQL
 9. 사용안하는 변수, 코드 없에기
 10. 모든 주석은 영어로
 11. 만약 변수/함수명이 2개의 영어 단어 이상이면 첫단어는 소문자로 시작하고 그 외는 대문자로 시작 ex)testFirst
+
+# Directories
+components
+- board
+-- board.vue
+- login
+-- login.vue
+위 처럼 기능 파일을 만들고 그 파일안에 vue 파일 넣기 (Header, Footer 제외)
