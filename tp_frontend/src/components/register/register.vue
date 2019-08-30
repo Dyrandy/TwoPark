@@ -1,23 +1,29 @@
 <template>
-<!--  <div align="center" id="title" v-bind:style="styleVue">-->
-<!--&lt;!&ndash;    {{ title }}&ndash;&gt;-->
-<!--  </div>-->
+<div>
+  <div align="center" id="title" v-bind:style="styleVue">
+    {{ title }}
+  </div>
   <hr width="500px">
-<!--  <div class="register-page">-->
-<!--    <div class="form" id="check">-->
-<!--      <input type="text" v-model="id" placeholder="ID">-->
-<!--      <input type="text" v-model="nickname" placeholder="NickName">-->
-<!--      <input type="email" v-model="email" placeholder="Email">-->
-<!--      <input type="password" v-model="pw"placeholder="Password">-->
-<!--      <input type="password" v-model="repw" placeholder="Confirm Password">-->
-<!--      <button v-on:click="check">Register</button>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="register-page">
+    <div class="form" id="check">
+      <input type="text" v-model="id" placeholder="ID">
+      <input type="text" v-model="nickname" placeholder="NickName">
+      <input type="email" v-model="email" placeholder="Email">
+      <input type="password" v-model="pw"placeholder="Password">
+      <input type="password" v-model="repw" placeholder="Confirm Password">
+      <button v-on:click="check()">Register</button>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
     export default {
         name : 'register'
+     }
+
+     function check(){
+        alert(1);
      }
     // // Title Tag
     // var title_style = new Vue({
