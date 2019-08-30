@@ -17,7 +17,7 @@ export default {
   components: {
       'mainHeader': mainHeader,
       'mainFooter': mainFooter,
-      'boardList': boardList
+      'boardList': boardList,
       'register' : register
   }
 }
