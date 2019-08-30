@@ -34,7 +34,7 @@
   }
 
   .wrapper{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -42,9 +42,10 @@
     width: 80%;
     left: 10%;
     height: 75px;
-    background-color:orangered;
+    /*background-color:orangered;*/
+    background-image: linear-gradient(to bottom right, red, yellow);
     position: fixed;
-    top: 5%;
+    top: 3%;
 
   }
 
@@ -52,7 +53,7 @@
     color: white;
     line-height: 75px;
     float:left;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
   }
   .menu{
     float:right;

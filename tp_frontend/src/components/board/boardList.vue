@@ -1,16 +1,14 @@
 <template>
   <table class="boardTable">
     <tr class="tableHead">
-      <div class="buttonGroup">
         <th class="num">NUM</th>
         <th class="title">TITLE</th>
         <th class="madeBy"> MADE BY</th>
         <th class="date">DATE</th>
-      </div>
     </tr>
 
     <tr class="tableAttribute">
-      <td class="num"><a href="#">Num</a></td>
+      <a href="#"><td class="num">Num</td></a>
       <td class="title"><a href="#">Title</a></td>
       <td class="madeBy"><a href="#">Made By</a></td>
       <td class="date"><a href="#">Date</a></td>
@@ -25,14 +23,7 @@
 </script>
 
 <style scoped>
-  body{
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
   .boardTable{
-    padding-top: 20%;
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #c7c7bc;
@@ -40,22 +31,43 @@
   .tableHead, .tableAttribute{
     text-align: center;
   }
-  .boardTable td{
+  .boardTable td, th{
     border: 1px solid #ccc;
     color: #404040;
   }
-  table.boardTable td a{
+
+  table.boardTable a{
     display: block;
-    width: 100%;
-    height: 100%;
     text-decoration: none;
   }
 
   table.boardTable tr a:hover{
-    background-color: #82E0FF;
+    background-color: orangered;
+    color: white;
   }
 
   tr.tableHead {
-    background-color: #82E000;
+    /*background-color: #82E000;*/
+    background-image: linear-gradient(to bottom right, orangered, yellow);
+  }
+  th{
+    color: white;
+    height: 40px;
+  }
+  td{
+    height: 30px;
+  }
+
+  .title{
+    width: 50%;
+  }
+  .num {
+    width: 10%;
+  }
+  .madeBy{
+    width: 20%;
+  }
+  .date{
+    width: 20%;
   }
 </style>
