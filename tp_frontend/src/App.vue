@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <mainHeader></mainHeader>
-<!--    <boardList></boardList>-->
     <router-view></router-view>
     <mainFooter></mainFooter>
   </div>
@@ -11,15 +10,16 @@
   import mainHeader from './components/Header.vue';
   import mainFooter from './components/Footer.vue';
   import boardList from './components/board/boardList.vue';
-  import userinfo from './components/userinfo/userinfo';
-
+  import userInfo from './components/userInfo/userInfo';
+  import boardWrite from './components/board/boardWrite';
 
 export default {
   components: {
       'mainHeader': mainHeader,
       'mainFooter': mainFooter,
       'boardList': boardList,
-      'userinfo' : userinfo
+      'userInfo' : userInfo,
+      'boardWrite': boardWrite
   }
 }
 </script>
@@ -29,7 +29,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
   margin-top: 60px;
 }

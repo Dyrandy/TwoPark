@@ -1,25 +1,37 @@
 <template>
-  <table class="boardTable">
-    <tr class="tableHead">
+  <div>
+    <table class="boardTable">
+      <tr class="tableHead">
         <th class="num">NUM</th>
         <th class="title">TITLE</th>
         <th class="madeBy"> MADE BY</th>
         <th class="date">DATE</th>
-    </tr>
+      </tr>
 
-    <tr class="tableAttribute">
-      <a href="#"><td class="num">Num</td></a>
-      <td class="title"><a href="#">Title</a></td>
-      <td class="madeBy"><a href="#">Made By</a></td>
-      <td class="date"><a href="#">Date</a></td>
-    </tr>
-  </table>
+      <tr class="tableAttribute" id="row1" onclick="window.location='/1';">
+        <td class="num">Num</td>
+        <td class="title">Title</td>
+        <td class="madeBy">Made By</td>
+        <td class="date">Date</td>
+      </tr>
+    </table>
+
+    <form method="GET" action="" class="search">
+      <input type="text" name="search" />
+      <input type="submit" value="search"/>
+    </form>
+    <button class="write" onclick="window.location='./boardWrite';">
+      write
+    </button>
+  </div>
 </template>
-.
+
+
 <script>
     export default {
         name: "boardList"
     }
+
 </script>
 
 <style scoped>
@@ -39,15 +51,14 @@
   table.boardTable a{
     display: block;
     text-decoration: none;
+    width: 100%;
   }
 
-  table.boardTable tr a:hover{
+  #row1:hover{
     background-color: orangered;
-    color: white;
   }
 
   tr.tableHead {
-    /*background-color: #82E000;*/
     background-image: linear-gradient(to bottom right, orangered, yellow);
   }
   th{
@@ -69,5 +80,21 @@
   }
   .date{
     width: 20%;
+  }
+
+  .write{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    /*margin-left: 80%;*/
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    padding: 8px;
+
+  }
+
+  .search{
+    padding-top: 2%;
+    text-align: center;
   }
 </style>
