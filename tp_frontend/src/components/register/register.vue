@@ -1,9 +1,4 @@
 <template>
-<div>
-  <div align="center" id="title" v-bind:style="styleVue">
-    {{ title }}
-  </div>
-  <hr width="500px">
   <div class="register-page">
     <div class="form" id="check">
       <input type="text" v-model="id" placeholder="ID">
@@ -14,32 +9,13 @@
       <button v-on:click="check()">Register</button>
     </div>
   </div>
-</div>
 </template>
 
 <script>
     export default {
         name : 'register'
      }
-
-     function check(){
-        alert(1);
-     }
-    // // Title Tag
-    // var title_style = new Vue({
-    //     el : '#title',
-    //     data : {
-    //         title : 'TwoPark Register!',
-    //         styleVue : {
-    //             fontSize : '30px',
-    //             fontWeight : 'bold',
-    //             color : 'blue',
-    //             marginTop : '100px',
-    //             marginBottom : '10px'
-    //         }
-    //     }
-    // })
-    //
+    // Need To Edit This!
     // // Login Check - NULL Value Request Protect
     // var login_check = new Vue({
     //     el : '#check',
@@ -137,8 +113,5 @@
   }
   .form button:hover,.form button:active,.form button:focus {
     background: #43A047;
-  }
-  .form .register-form {
-    display: none;
   }
 </style>

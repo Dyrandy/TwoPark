@@ -11,12 +11,15 @@
   import mainHeader from './components/Header.vue';
   import mainFooter from './components/Footer.vue';
   import boardList from './components/board/boardList.vue';
+  import userinfo from './components/userinfo/userinfo';
+
 
 export default {
   components: {
       'mainHeader': mainHeader,
       'mainFooter': mainFooter,
-      'boardList': boardList
+      'boardList': boardList,
+      'userinfo' : userinfo
   }
 }
 </script>
