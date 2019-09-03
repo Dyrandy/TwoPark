@@ -5,6 +5,7 @@ import register from '../components/register/register'
 import userInfo from "../components/userInfo/userInfo"
 import boardWrite from '../components/board/boardWrite'
 import boardView from '../components/board/boardView'
+import userInfo_Change from "../components/userInfo/userInfo_Change";
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/userInfo',
       name: 'userInfo',
       component : userInfo
+    },
+    {
+      path: '/userInfo_change',
+      name: 'userInfo_Chagne',
+      component : userInfo_Change
     }
   ]
 })

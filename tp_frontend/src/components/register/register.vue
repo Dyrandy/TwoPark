@@ -13,59 +13,48 @@
 
 <script>
     export default {
-        name : 'register'
-     }
-    // Need To Edit This!
-    // // Login Check - NULL Value Request Protect
-    // var login_check = new Vue({
-    //     el : '#check',
-    //     data : {
-    //         id : '',
-    //         nickname : '',
-    //         email : '',
-    //         pw : '',
-    //         repw : ''
-    //     },
-    //     methods :{
-    //         check: function () {
-    //             if(this.id == '') {
-    //                 alert('Input Your ID')
-    //             }
-    //             else if(this.nickname == '') {
-    //                 alert('Input Your NickName')
-    //             }
-    //             else if(this.email == '') {
-    //                 alert('Input Your Email')
-    //             }
-    //             else if(this.pw == '') {
-    //                 alert('Input Your Password')
-    //             }
-    //             else if(this.repw == '') {
-    //                 alert('Input Your Confirm Password')
-    //             }
-    //             else if(this.repw != this.pw) {
-    //                 alert('NOT Match Your Password and Confirm Password')
-    //             }
-    //             else{
-    //                 ajax.send(this.id, this.nickname, this.email, this.pw, this.repw);
-    //             }
-    //         }
-    //     }
-    // })
-    //
-    // // AJAX CODE using Vue-axios - send Register_proc
-    // var ajax = new Vue({
-    //     methods : {
-    //         send: function(id, nick, email, pw, repw){
-    //             axios.post('/register_proc',{ id : id, nickname : nick, email : email, pw : pw, repw: repw})
-    //                 .then(function(res){
-    //                     console.log(res);
-    //                 }).catch(function (e) {
-    //                 console.error(e);
-    //             })
-    //         }
-    //     }
-    // })
+        el: '#check',
+        data: {
+            id: '',
+            nickname: '',
+            email: '',
+            pw: '',
+            repw: ''
+        },
+        methods: {
+            check: function () {
+                if (!this.id) {
+                    alert('Input Your ID')
+                }
+                else if (!this.nickname) {
+                    alert('Input Your NickName')
+                } else if (!this.email) {
+                    alert('Input Your Email')
+                } else if (!this.pw) {
+                    alert('Input Your Password')
+                } else if (!this.repw) {
+                    alert('Input Your Confirm Password')
+                } else if (this.repw != this.pw) {
+                    alert('NOT Match Your Password and Confirm Password')
+                }
+                else{
+                    const baseURI = '/register_proc'
+                    this.$http.post(baseURI, {
+                        id: this.id,
+                        pw : this.pw,
+                        nickname : this.nickname,
+                        email : this.email,
+                        repw : this.repw
+                    })
+                        .then((result) => {
+                            this.users = result.data
+                        })
+                }
+            }
+        }
+    }
+
+
 </script>
 
 <style scoped>
