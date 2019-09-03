@@ -10,8 +10,9 @@
   import mainHeader from './components/Header.vue';
   import mainFooter from './components/Footer.vue';
   import boardList from './components/board/boardList.vue';
-  import userInfo from './components/userInfo/userInfo';
-  import boardWrite from './components/board/boardWrite';
+  import userInfo from './components/userInfo/userInfo.vue';
+  import boardWrite from './components/board/boardWrite.vue';
+  import boardView from './components/board/boardView.vue';
 
 export default {
   components: {
@@ -19,7 +20,8 @@ export default {
       'mainFooter': mainFooter,
       'boardList': boardList,
       'userInfo' : userInfo,
-      'boardWrite': boardWrite
+      'boardWrite': boardWrite,
+      'boardView': boardView
   }
 }
 </script>

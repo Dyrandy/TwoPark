@@ -1,13 +1,13 @@
 <template>
   <header>
     <div class="wrapper">
-      <h1><a href="./">TwoPark</a></h1>
+      <h1><a href="/">TwoPark</a></h1>
       <nav>
         <ul class = "menu">
           <li><a href="">About</a></li>
-          <li><a href="./board">Board</a></li>
+          <li><a href="/board">Board</a></li>
           <li><a href="">login</a></li>
-          <li><a href="./register">Register</a></li>
+          <li><a href="/register">Register</a></li>
         </ul>
       </nav>
     </div>

@@ -1,5 +1,8 @@
 <template>
   <div>
+    <button class="write" onclick="window.location='./boardWrite';">
+      write
+    </button>
     <table class="boardTable">
       <tr class="tableHead">
         <th class="num">NUM</th>
@@ -8,7 +11,7 @@
         <th class="date">DATE</th>
       </tr>
 
-      <tr class="tableAttribute" id="row1" onclick="window.location='/1';">
+      <tr class="tableAttribute" id="row1" onclick="window.location='./board/1';">
         <td class="num">Num</td>
         <td class="title">Title</td>
         <td class="madeBy">Made By</td>
@@ -20,9 +23,7 @@
       <input type="text" name="search" />
       <input type="submit" value="search"/>
     </form>
-    <button class="write" onclick="window.location='./boardWrite';">
-      write
-    </button>
+
   </div>
 </template>
 
@@ -83,8 +84,9 @@
   }
 
   .write{
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 95%;
     /*margin-left: 80%;*/
     border-radius: 5px;
     background-color: orangered;
