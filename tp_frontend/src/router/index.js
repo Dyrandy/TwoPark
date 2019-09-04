@@ -7,6 +7,7 @@ import boardWrite from '../components/board/boardWrite'
 import boardView from '../components/board/boardView'
 import userInfo_Change from "../components/userInfo/userInfo_Change"
 import login from "../components/login/Login";
+import index from "../components/index"
 
 Vue.use(Router);
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component : login
+    },
+    {
+      path: '',
+      name: 'index',
+      component: index
     }
   ]
 })

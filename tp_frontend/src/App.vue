@@ -14,6 +14,7 @@
   import boardWrite from './components/board/boardWrite.vue';
   import boardView from './components/board/boardView.vue';
   import login from './components/login/Login.vue';
+  import index from './components/index.vue';
 
 export default {
   components: {
@@ -23,7 +24,8 @@ export default {
       'userInfo' : userInfo,
       'boardWrite': boardWrite,
       'boardView': boardView,
-      'login' : login
+      'login' : login,
+      'index' : index
   }
 }
 </script>
