@@ -4,9 +4,8 @@
       <h1><a href="/">TwoPark</a></h1>
       <nav>
         <ul class = "menu">
-          <li><a href="">About</a></li>
           <li><a href="/board">Board</a></li>
-          <li><a href="/login">login</a></li>
+          <li><a href="/login">Login</a></li>
           <li><a href="/register">Register</a></li>
         </ul>
       </nav>
@@ -42,7 +41,6 @@
     width: 80%;
     left: 10%;
     height: 75px;
-    /*background-color:orangered;*/
     background-image: linear-gradient(to bottom right, red, yellow);
     position: fixed;
     top: 3%;
@@ -53,7 +51,6 @@
     color: white;
     line-height: 75px;
     float:left;
-    /*margin-left: 10px;*/
   }
   .menu{
     float:right;

@@ -26,6 +26,7 @@
   }
   footer{
     width: 80%;
+    left: 10%;
     height: 80px;
     background-color :whitesmoke;
     position: fixed;
