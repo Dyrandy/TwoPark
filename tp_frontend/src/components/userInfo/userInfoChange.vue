@@ -1,10 +1,10 @@
 <template>
   <div class="register-page">
     <div class="form" id="form">
-      <h4>ID</h4><input type="text" value="P4rkJW" disabled></br>
-      <h4>NickName</h4><input type="text"  value="ADMIN" disabled></br>
-      <h4>Email</h4> <input type="email" value="wr4gcmoima@naver.com" disabled></br>
-      <h4>Password</h4> <input type="password" v-model='pw' placeholder="Password"></br><h1></h1>
+      <h4>ID</h4><input type="text" value="P4rkJW" disabled><br>
+      <h4>NickName</h4><input type="text"  value="ADMIN" disabled><br>
+      <h4>Email</h4> <input type="email" value="wr4gcmoima@naver.com" disabled><br>
+      <h4>Password</h4> <input type="password" v-model='pw' placeholder="Password"><br><h1></h1>
     </div>
     <button v-on:click="check">change Information</button>
     <button @click="close_account" style="background-color: #c7c7bc">Close Account </button>
@@ -14,7 +14,7 @@
 <script>
     export default {
         el : '#form',
-        name: 'userinfo_Change',
+        name: 'userInfoChange',
         data : {
             pw : ''
         },
@@ -33,9 +33,9 @@
             }
             },
             close_account : function(){
-                var bool = confirm("Do you want to close your Accont?");
+                var bool = confirm("Do you want to close your Account?");
                 if(bool) {
-                    const baseURI = '/delete_account'
+                    const baseURI = '/deleteAccount'
                     this.$http.post(baseURI, {
                         pw: this.pw
                     })

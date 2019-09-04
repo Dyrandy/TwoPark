@@ -4,9 +4,15 @@
       <h1><a href="/">TwoPark</a></h1>
       <nav>
         <ul class = "menu">
-          <li><a href="/board">Board</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Register</a></li>
+          <li>
+            <a href="/board">Board</a>
+          </li>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+          <li>
+            <a href="/register">Register</a>
+          </li>
         </ul>
       </nav>
     </div>

@@ -5,7 +5,7 @@ import register from '../components/register/register'
 import userInfo from "../components/userInfo/userInfo"
 import boardWrite from '../components/board/boardWrite'
 import boardView from '../components/board/boardView'
-import userInfo_Change from "../components/userInfo/userInfo_Change"
+import userInfo_Change from "../components/userInfo/userInfoChange"
 import login from "../components/login/Login";
 import index from "../components/index"
 
@@ -40,8 +40,8 @@ export default new Router({
       component : userInfo
     },
     {
-      path: '/userInfo_change',
-      name: 'userInfo_Chagne',
+      path: '/userInfoChange',
+      name: 'userInfoChange',
       component : userInfo_Change
     },
     {
