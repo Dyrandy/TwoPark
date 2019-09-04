@@ -13,6 +13,7 @@
   import userInfo from './components/userInfo/userInfo.vue';
   import boardWrite from './components/board/boardWrite.vue';
   import boardView from './components/board/boardView.vue';
+  import login from './components/login/Login.vue';
 
 export default {
   components: {
@@ -21,7 +22,8 @@ export default {
       'boardList': boardList,
       'userInfo' : userInfo,
       'boardWrite': boardWrite,
-      'boardView': boardView
+      'boardView': boardView,
+      'login' : login
   }
 }
 </script>
