@@ -1,11 +1,14 @@
 <template>
   <div class="register-page">
     <div class="form" id="check">
+      <div v-if="overlap_id"><font size="2px" color="red">※ Already exists ID</font></div>
       <input type="text" v-model="id" placeholder="ID">
+      <div v-if="overlap_nickname"><font size="2px" color="red">※ Already exists Nickname</font></div>
       <input type="text" v-model="nickname" placeholder="NickName">
       <input type="email" v-model="email" placeholder="Email">
       <input type="password" v-model="pw"placeholder="Password">
       <input type="password" v-model="repw" placeholder="Confirm Password">
+      <div v-show="email_auth"><input type="text" placeholder="Input E-mail Auth Code"></div>
       <button v-on:click="check()">Register</button>
     </div>
   </div>
@@ -13,14 +16,20 @@
 
 <script>
     export default {
+      data(){
+          return {
+              //Overlap id and nickname will process back-end
+              overlap_id : false,
+              overlap_nickname : false,
+              email_auth : false,
+              id: '',
+              nickname: '',
+              email: '',
+              pw: '',
+              repw: ''
+          };
+      },
         el: '#check',
-        data: {
-            id: '',
-            nickname: '',
-            email: '',
-            pw: '',
-            repw: ''
-        },
         methods: {
             check: function () {
                 if (!this.id) {
@@ -38,6 +47,7 @@
                     alert('NOT Match Your Password and Confirm Password')
                 }
                 else{
+                    this.email_auth = true
                     const baseURI = '/register_proc'
                     this.$http.post(baseURI, {
                         id: this.id,
@@ -53,6 +63,8 @@
             }
         }
     }
+
+
 
 
 </script>
@@ -71,8 +83,8 @@
     background: #FFFFFF;
     max-width: 360px;
     margin: 0px 0px 0px 0px;
-    padding: 45px;
-    text-align: center;
+    padding: 25px;
+    text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   .form input {
@@ -90,7 +102,7 @@
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #4CAF50;
+    background: #FFA500;
     width: 100%;
     border: 0;
     padding: 15px;

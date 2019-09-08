@@ -1,10 +1,13 @@
 <template>
-  <div class="register-page">
+  <div class="change-page">
     <div class="form" id="form">
       <h4>ID</h4><input type="text" value="P4rkJW" disabled><br>
       <h4>NickName</h4><input type="text"  value="ADMIN" disabled><br>
       <h4>Email</h4> <input type="email" value="wr4gcmoima@naver.com" disabled><br>
       <h4>Password</h4> <input type="password" v-model='pw' placeholder="Password"><br><h1></h1>
+      <div v-if="email_auth" v-style="style_vue">
+        <h4>Input E-mail Auth Code</h4><input type="text">
+      </div>
     </div>
     <button v-on:click="check">change Information</button>
     <button @click="close_account" style="background-color: #c7c7bc">Close Account </button>
@@ -13,18 +16,22 @@
 
 <script>
     export default {
+        data() {
+            return {
+                pw: '',
+                email_auth: false,
+            }
+        },
         el : '#form',
         name: 'userInfoChange',
-        data : {
-            pw : ''
-        },
         methods: {
             check: function(){
                 if (!this.pw) {
                     alert('input your password')
                 } else {
+                    this.email_auth = true
                     const baseURI = '/change_proc'
-                this.$http.post(baseURI, {
+                    this.$http.post(baseURI, {
                     pw: this.pw
                 })
                     .then((result) => {
@@ -52,7 +59,7 @@
 <style scoped>
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-  .register-page {
+  .change-page {
     width: 460px;
     padding: 3% 0 0;
     margin: auto;
@@ -64,11 +71,12 @@
     max-width: 360px;
     margin: 0px 0px 0px 0px;
     padding: 45px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   .form input {
     font-family: "Roboto", sans-serif;
+    font-weight: bold;
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -78,7 +86,7 @@
     box-sizing: border-box;
     font-size: 14px;
   }
-  .register-page button {
+  .change-page button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -89,8 +97,8 @@
     padding: 15px;
     color: #FFFFFF;
     font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    -webkit-transition: all;
+    transition: all;
     cursor: pointer;
   }
   .form button:hover,.form button:active,.form button:focus {
@@ -104,9 +112,5 @@
   .form .message a {
     color: #4CAF50;
     text-decoration: none;
-  }
-
-  .form .register-form {
-    display: none;
   }
 </style>

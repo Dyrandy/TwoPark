@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <div class="userinfo-page">
@@ -9,33 +10,27 @@
         Email : wr4gcmoima@naver.com
        </div>
     </div>
-
-    <span><h1>User Written Board</h1></span>
-  <table class="boardTable">
-    <tr class="tableHead">
-      <th class="num">NUM</th>
-      <th class="title">TITLE</th>
-      <th class="madeBy"> MADE BY</th>
-      <th class="date">DATE</th>
-    </tr>
-
-    <tr class="tableAttribute">
-      <a href="#"><td class="num">Num</td></a>
-      <td class="title"><a href="#">Title</a></td>
-      <td class="madeBy"><a href="#">Made By</a></td>
-      <td class="date"><a href="#">Date</a></td>
-    </tr>
-  </table>
+    <font style="font-family: 'Chilanka', sans-serif; font-size: 30px;" ><h1>User Written Board</h1></font>
+    <board-list></board-list>
 </div>
+
 </template>
 
+
+
 <script>
+  import boardList from "../board/boardList";
+
     export default {
+        components :{
+            'boardList' : boardList
+        },
         name : 'userinfo'
     }
 </script>
 
 <style scoped>
+  @import url(https://fonts.googleapis.com/css?family=Chilanka);
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
   .form {
