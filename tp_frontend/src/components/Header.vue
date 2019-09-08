@@ -28,6 +28,7 @@
 <style scoped>
   *{
     margin-top: 0;
+    z-index: 10;
   }
   li{
     list-style: none;

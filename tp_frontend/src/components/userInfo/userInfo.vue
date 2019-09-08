@@ -9,11 +9,10 @@
         Nickname : P4rkJW <br>
         Email : wr4gcmoima@naver.com
        </div>
-    </div>
+      </div>
     <font style="font-family: 'Chilanka', sans-serif; font-size: 30px;" ><h1>User Written Board</h1></font>
     <board-list></board-list>
-</div>
-
+  </div>
 </template>
 
 

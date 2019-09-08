@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="form">
     <button class="write" onclick="window.location='./boardWrite';">
       write
     </button>
@@ -39,7 +39,13 @@
   .boardTable{
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #c7c7bc;
+    position: relative;
+    z-index: 0;
+    background: #FFFFFF;
+    margin: 0px 0px 0px 0px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   .tableHead, .tableAttribute{
     text-align: center;
@@ -56,7 +62,8 @@
   }
 
   #row1:hover{
-    background-color: orangered;
+    background-color: lightyellow;
+    /*color: white;*/
   }
 
   tr.tableHead {
@@ -89,7 +96,7 @@
     margin-left: 95%;
     /*margin-left: 80%;*/
     border-radius: 5px;
-    background-color: orangered;
+    background: #FFA500;
     color: white;
     padding: 8px;
 
