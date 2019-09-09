@@ -1,14 +1,16 @@
 <template>
-  <div class="posting">
-    <label><b>Text</b></label>
-    <hr weight="500px">
-    Things To Say1 <br>
-    LINE2 <br>
-    LINE3 <br>
-    LINE4
-    <br>
-    <br>
-    <a href="#">File</a>
+  <div>
+    <div class="posting">
+      <label><b>Text</b></label>
+      <hr weight="500px">
+      Things To Say1 <br>
+      LINE2 <br>
+      LINE3 <br>
+      LINE4
+      <br>
+      <br>
+      <a href="#">File</a>
+    </div>
   </div>
 </template>
 
@@ -33,5 +35,6 @@
     background: #FFFFFF;
     padding: 2%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    /*height: 50%;*/
   }
 </style>

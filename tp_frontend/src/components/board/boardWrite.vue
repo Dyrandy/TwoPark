@@ -1,17 +1,19 @@
 <template>
+  <div>
   <div class="posting">
-    <form action="" method="POST">
-      <label>Title</label><input type="checkbox" id="checkbox" name="checkbox" value="secret"><br>
-      <input type="text" placeholder="Title">
-      <br>
-      <label>Content</label><br>
-      <textarea placeholder="Text" maxlength="1000" rows=10></textarea>
-      <br>
-      <label>File</label><br>
-      <input type="file" name="file" value="upload">
-      <br>
-      <input type="submit" value="POST">
-    </form>
+      <form action="" method="POST">
+       <label>Title</label><input type="checkbox" id="checkbox" name="checkbox" value="secret"><br>
+       <input type="text" placeholder="Title">
+        <br>
+        <label>Content</label><br>
+       <textarea placeholder="Text" maxlength="1000" rows=10></textarea>
+        <br>
+       <label>File</label><br>
+        <input type="file" name="file" value="upload">
+        <br>
+        <input type="submit" value="POST">
+      </form>
+    </div>
   </div>
 </template>
 

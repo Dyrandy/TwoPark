@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <mainHeader></mainHeader>
-    <router-view></router-view>
-    <mainFooter></mainFooter>
+    <router-view id="container"></router-view>
+    <mainFooter id="footer"></mainFooter>
   </div>
 </template>
 
@@ -35,8 +35,16 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*text-align: center;*/
   color: #2c3e50;
   margin-top: 60px;
 }
+  #container{
+    min-height: 480px;
+  }
+
+  #footer{
+    padding-top: 2%;
+    margin-right: 10%;
+    position: relative;
+  }
 </style>
