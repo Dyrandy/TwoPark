@@ -12,6 +12,9 @@
           <tr>
             <td>Copyright © TwoPark All rights reserved.</td>
           </tr>
+          <tr>
+            <td>GitHub link : https://github.com/Dyrandy/TwoPark</td>
+          </tr>
         </table>
         <div class="logo">
           <img src="../assets/cukLogo.png">
@@ -33,11 +36,10 @@
     margin: auto;
   }
   footer{
-    width: 80%;
-    left: 10%;
+    width: 100%;
+    right: 0;
     height: 80px;
     background-color :whitesmoke;
-    position: fixed;
     bottom: 2%;
   }
   .logo{
@@ -52,5 +54,7 @@
     height: 80px;
     float:left;
     vertical-align: middle;
+    font-size: x-small;
+    color : gray;
   }
 </style>

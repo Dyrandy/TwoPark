@@ -50,7 +50,7 @@
     height: 75px;
     background-image: linear-gradient(to bottom right, red, yellow);
     position: fixed;
-    top: 3%;
+    top: 0;
 
   }
 
@@ -58,6 +58,7 @@
     color: white;
     line-height: 75px;
     float:left;
+    font-family: "Roboto", fantasy;
   }
   .menu{
     float:right;
