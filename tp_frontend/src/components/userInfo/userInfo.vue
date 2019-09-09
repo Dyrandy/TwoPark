@@ -10,8 +10,10 @@
         Email : wr4gcmoima@naver.com
        </div>
       </div>
+        <center>
     <font style="font-family: 'Chilanka', sans-serif; font-size: 30px;" ><h1>User Written Board</h1></font>
     <board-list></board-list>
+        </center>
   </div>
 </template>
 
@@ -47,53 +49,5 @@
     width: 800px;
     padding: 3% 0 0;
     margin: auto;
-  }
-
-  .boardTable{
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #c7c7bc;
-  }
-  .tableHead, .tableAttribute{
-    text-align: center;
-  }
-  .boardTable td, th{
-    border: 1px solid #ccc;
-    color: #404040;
-  }
-
-  table.boardTable a{
-    display: block;
-    text-decoration: none;
-  }
-
-  table.boardTable tr a:hover{
-    background-color: orangered;
-    color: white;
-  }
-
-  tr.tableHead {
-    /*background-color: #82E000;*/
-    background-image: linear-gradient(to bottom right, orangered, yellow);
-  }
-  th{
-    color: white;
-    height: 40px;
-  }
-  td{
-    height: 30px;
-  }
-
-  .title{
-    width: 50%;
-  }
-  .num {
-    width: 10%;
-  }
-  .madeBy{
-    width: 20%;
-  }
-  .date{
-    width: 20%;
   }
 </style>
