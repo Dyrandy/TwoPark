@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
-    <title>Board Form</title>
+    <title>TwoParkBoard</title>
     <link rel="stylesheet" th:href="@{/css/base.css}" />
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
 </head>
@@ -12,10 +12,10 @@
     <div th:replace="layout/header::header"></div>
     <div class="container">
         <div class="page-header">
-            <h1>게시글 목록</h1>
+            <h1>Board</h1>
         </div>
         <div class="pull-right" style="width:100px; margin:10px 0;">
-            <a href="/board/form" class="btn btn-primary btn-block"> 등록 </a>
+            <a href="/board/form" class="btn btn-primary btn-block"> Write </a>
         </div>
         <br><br><br>
 
@@ -24,10 +24,10 @@
                 <thead>
                 <tr>
                     <th class="col-md-1">#</th>
-                    <th class="col-md-2">서비스 분류</th>
-                    <th class="col-md-5">제목</th>
-                    <th class="col-md-2">작성 날짜</th>
-                    <th class="col-md-2">수정 날짜</th>
+                    <th class="col-md-2">Type</th>
+                    <th class="col-md-5">Title</th>
+                    <th class="col-md-2">Created Date</th>
+                    <th class="col-md-2">Updated Date</th>
                 </tr>
                 </thead>
                 <tbody>
