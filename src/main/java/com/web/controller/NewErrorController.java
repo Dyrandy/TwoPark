@@ -24,4 +24,5 @@ public class NewErrorController implements ErrorController {
     public String getErrorPath(){
         return "/error";
     }
+
 }

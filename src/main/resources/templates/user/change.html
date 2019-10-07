@@ -3,13 +3,41 @@
         <title>TwoPark UserInfo Change</title>
         <link rel="stylesheet" th:href="@{/css/base.css}" />
         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/changeinfo.css}" />
+        <style>
+            .container{
+                text-align: center;
+            }
+            #id{
+                text-align: left;
+            }
+
+        </style>
     </head>
     <header>
         <div th:include="layout/header :: header"></div>
     </header>
     <body>
-        Change TEST
-<!--        It Will Be Change! Just Mapping TEST-->
+        <div class="container">
+            <div class="page-header" id="id">
+                <h1>User Information Change</h1>
+            </div>
+            <div class="changeinfo">
+                <label>ID</label>
+                <input type="text" value="P4rkJW" disabled>
+                <label>Nickname</label>
+                <input type="text" value="P4rkJW" disabled>
+                <label>Email</label>
+                <input type="email" value="wr4gcmocima@naver.com" disabled>
+                <label>Password</label>
+                <input type="password">
+                <label>Repeat Password</label>
+                <input type="text">
+                <label>Email Auth-Code </label>
+                <input type="text">
+                <button>Change</button>
+            </div>
+        </div>
     </body>
     <footer>
         <div th:include="layout/footer :: footer"></div>
