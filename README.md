@@ -3,7 +3,7 @@ A Simple Board Made by Students of Catholic University of Korea
 
 
 # Rules
-Front-End: Vue:js
+Front-End: thymeleaf, vuejs(?)
 Back-End: Spring-Boot
 DataBase: MySQL
 
