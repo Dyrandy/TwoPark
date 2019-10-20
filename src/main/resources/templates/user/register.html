@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>TwoPark UserInfo Change</title>
+        <link rel="stylesheet" th:href="@{/css/base.css}" />
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/changeinfo.css}" />
+        <style>
+            .container{
+                text-align: center;
+            }
+            #id{
+                text-align: left;
+            }
+        </style>
+        <script>
+            function hello() {
+                if(!(document.getElementById("id").value)){
+                    alert("Input your ID");
+                }
+                else if(!(document.getElementById("nickname").value)){
+                    alert("Input your Nickname");
+                }
+                else if(!(document.getElementById("email").value)){
+                    alert("Input your Email");
+                }
+                else if(!(document.getElementById("pw").value)){
+                    alert("Input your Password");
+                }
+                else if(!(document.getElementById("pwre").value)){
+                    alert("Repeat your Password");
+                }
+                else if(!(document.getElementById("email_auth").value)){
+                    alert("Check your Email-Auth-Code");
+                    var auth = document.getElementById("auth");
+                    auth.style.display = "block";
+                }
+            }
+        </script>
+    </head>
+    <header>
+        <div th:include="layout/header :: header"></div>
+    </header>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Register</h1>
+            </div>
+            <div class="changeinfo">
+                <label>ID</label>
+                <input type="text" id="id">
+                <label>Nickname</label>
+                <input type="text" id="nickname">
+                <label>Email</label>
+                <input type="email" id ="email">
+                <label>Password</label>
+                <input type="password" id="pw">
+                <label>Repeat Password</label>
+                <input type="text" id="pwre">
+                <div id="auth">
+                <label>Email Auth-Code </label>
+                <input type="text" id="email_auth">
+                </div>
+                <button onclick=hello()>Register</button>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div th:include="layout/footer :: footer"></div>
+    </footer>
+</html>

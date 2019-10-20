@@ -29,7 +29,5 @@ public class BoardController {
         model.addAttribute("board", boardService.findBoardByIdx(idx));
         return "board/form";
     }
-
-
 }
 

@@ -28,4 +28,9 @@ button{
     width: 15%;
     height: 15%;
     font-weight: bold;
+
+}
+
+#auth{
+    display : none;
 }
