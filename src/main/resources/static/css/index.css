@@ -1,0 +1,13 @@
+
+.border{
+    float:left;
+    width:30%;
+    padding:5px;
+    margin:5px;
+    border-right: 1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+.main-text{
+    margin-bottom: 3px;
+    font-size: 15px;
+}
