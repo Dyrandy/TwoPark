@@ -26,9 +26,9 @@ public class WebApplication {
     public CommandLineRunner runner(UserRepository userRepository, BoardRepository boardRepository) throws Exception{
         return (args) -> {
             User user = userRepository.save(User.builder()
-                .name("havi")
-                .password("test")
-                .email("havi@gmail.com")
+                .name("twopark")
+                .password("guest")
+                .email("twopark@gmail.com")
                 .createdDate(LocalDateTime.now())
                 .build());
 
