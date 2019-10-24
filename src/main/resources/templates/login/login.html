@@ -14,9 +14,19 @@
     <div class="page-header">
         <h1>Login</h1>
     </div>
-    <input type="text" id="id"/>
-    <input type="password" id="pw"/>
-    <button type="button" id="login">로그인</button>
+    <table class="table">
+        <tr>
+            <th style="padding:13px 0 0 15px;">ID</th>
+            <td><input id="id" type="text" class="col-md-1 form-control input-sm" /></td>
+        </tr>
+        <tr>
+            <th style="padding:13px 0 0 15px;">Password</th>
+            <td><input id="pw" type="password" class="col-md-1 form-control input-sm" /></td>
+        </tr>
+    </table>
+    <div class="pull-right">
+        <a class="btn btn-primary" id="login">login</a>
+    </div>
 
     <br><br><br><br>
 
@@ -37,11 +47,11 @@
             contentType: "application/json",
             dataType: "json",
             success: function() {
-                alert('Saved!');
+                alert('Login Success!');
                 location.href = '/board/list';
             },
             error: function() {
-                alert('Save Failed');
+                alert('Login Failed');
             }
         });
     });
