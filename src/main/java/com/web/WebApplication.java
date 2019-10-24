@@ -32,7 +32,7 @@ public class WebApplication {
                 .createdDate(LocalDateTime.now())
                 .build());
 
-            IntStream.rangeClosed(1, 200).forEach(index -> boardRepository.save(Board.builder()
+            IntStream.rangeClosed(1, 15).forEach(index -> boardRepository.save(Board.builder()
                 .title("게시글"+index)
                 .subTitle("순서" + index)
                 .content("콘텐츠")
