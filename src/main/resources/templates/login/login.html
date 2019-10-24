@@ -14,13 +14,38 @@
     <div class="page-header">
         <h1>Login</h1>
     </div>
-
+    <input type="text" id="id"/>
+    <input type="password" id="pw"/>
+    <button type="button" id="login">로그인</button>
 
     <br><br><br><br>
 
 </div>
 
 <div th:replace="layout/footer::footer"></div>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script>
+    $('#login').click(function() {
+        var jsonData = JSON.stringify({
+            id: $('#id').val(),
+            pw: $('#pw').val()
+        });
+        $.ajax({
+            url: "http://localhost:8081/api/boards",
+            type: "POST",
+            data: jsonData,
+            contentType: "application/json",
+            dataType: "json",
+            success: function() {
+                alert('Saved!');
+                location.href = '/board/list';
+            },
+            error: function() {
+                alert('Save Failed');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
