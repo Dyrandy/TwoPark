@@ -26,8 +26,8 @@ public class UserController {
 
     @GetMapping("/register")
  //   public String register(@RequestParam(value = "idx", defaultValue = "a") String A, @RequestParam(value = "idx", defaultValue = "b") String B, @RequestParam(value = "idx", defaultValue = "c") String  C,Model model){
-        public String register(Model model){
-        model.addAttribute("register", UserService.register("A","B" , "C"));
+    public String register(Model model){
+        //model.addAttribute("register", UserService.register("A","B" , "C"));
         return "user/register";
     }
 }

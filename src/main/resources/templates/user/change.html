@@ -1,23 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TwoPark UserInfo Change</title>
         <link rel="stylesheet" th:href="@{/css/base.css}" />
         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
-        <link rel="stylesheet" th:href="@{/css/changeinfo.css}" />
-        <style>
-            .container{
-                text-align: center;
-            }
-            #id{
-                text-align: left;
-            }
+<!--        <link rel="stylesheet" th:href="@{/css/changeinfo.css}" />-->
+<!--        <style>-->
+<!--            .container{-->
+<!--                text-align: center;-->
+<!--            }-->
+<!--            #id{-->
+<!--                text-align: left;-->
+<!--            }-->
 
-        </style>
+<!--        </style>-->
     </head>
-    <header>
-        <div th:include="layout/header :: header"></div>
-    </header>
     <body>
+        <div th:include="layout/header::header"></div>
         <div class="container">
             <div class="page-header" id="id">
                 <h1>User Information Change</h1>
@@ -38,8 +37,6 @@
                 <button>Change</button>
             </div>
         </div>
+        <div th:include="layout/footer::footer"></div>
     </body>
-    <footer>
-        <div th:include="layout/footer :: footer"></div>
-    </footer>
 </html>

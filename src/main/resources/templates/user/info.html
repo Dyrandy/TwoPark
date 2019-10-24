@@ -1,17 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TwoPark UserInfo</title>
         <link rel="stylesheet" th:href="@{/css/base.css}" />
         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
     </head>
-    <header>
-        <div th:include="layout/header :: header"></div>
-    </header>
     <body>
+    <div th:include="layout/header :: header"></div>
     Info TEST
-    <!--        It Will Be Change! Just Mapping TEST-->
+    <!--        It Will Be Changed! Just Mapping TEST-->
+    <div th:include="layout/footer :: footer"></div>
     </body>
-    <footer>
-        <div th:include="layout/footer :: footer"></div>
-    </footer>
 </html>
