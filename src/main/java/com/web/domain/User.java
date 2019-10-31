@@ -10,34 +10,43 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table
-public class User implements Serializable{
+public class User{
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idx;
-
-    @Column
-    private String name;
-
-    @Column
-    private String password;
-
-    @Column
+    private int idx;
+    private String nickname;
+    private String id;
+    private String pw;
     private String email;
-
-    @Column
     private LocalDateTime createdDate;
-
-    @Column
     private LocalDateTime updatedDate;
 
-    @Builder
-    public User(String name, String password, String email, LocalDateTime createdDate, LocalDateTime updatedDate){
-        this.name = name;
-        this.password = password;
-        this.email = email;
-        this.createdDate = createdDate;
-        this.updatedDate = updatedDate;
+//    public String getUsername(){
+//        return username;
+//    }
 
+    public void setID(String id){
+        this.id = id;
     }
+
+    public void setPW(String pw){
+        this.pw = pw;
+    }
+
+    public void setNickname(String nickname){
+        this.nickname = nickname;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+
+
+//    public String getPassword(){
+//        return password;
+//    }
+
+
 }

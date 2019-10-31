@@ -1,18 +1,24 @@
 package com.web.controller;
 
 import com.web.service.UserService;
+import com.web.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.validation.constraints.Null;
 import java.awt.print.Pageable;
 
 @Controller
 public class UserController {
-    UserService UserService;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping("/user/info")
     public String info(){
@@ -25,9 +31,22 @@ public class UserController {
     }
 
     @GetMapping("/register")
- //   public String register(@RequestParam(value = "idx", defaultValue = "a") String A, @RequestParam(value = "idx", defaultValue = "b") String B, @RequestParam(value = "idx", defaultValue = "c") String  C,Model model){
     public String register(Model model){
-        //model.addAttribute("register", UserService.register("A","B" , "C"));
         return "user/register";
+    }
+
+    @PostMapping("/register")
+    public String PostRegister(@RequestParam("user_id") String id, @RequestParam("user_password") String pw, @RequestParam("user_nickname") String nickname, @RequestParam("user_email") String email, Model model) {
+        if (id == "" || pw == "" || email == "" || nickname == "") {
+            return "error";
+        } else {
+            User user = new User();
+            user.setID(id);
+            user.setPW(pw);
+            user.setNickname(nickname);
+            user.setEmail(email);
+            userService.InsertUser(user);
+            return "login/login";
+        }
     }
 }

@@ -15,66 +15,74 @@
 <!--        </style>-->
         <script>
             function hello() {
-                if(!(document.getElementById("id").value)){
+                if(!(document.getElementsByName('user_id')[0].value)){
                     alert("Input your ID");
                 }
-                else if(!(document.getElementById("nickname").value)){
+                else if(!(document.getElementsByName("user_nickname")[0].value)){
                     alert("Input your Nickname");
                 }
-                else if(!(document.getElementById("email").value)){
+                else if(!(document.getElementsByName("user_email")[0].value)){
                     alert("Input your Email");
                 }
-                else if(!(document.getElementById("pw").value)){
+                else if(!(document.getElementsByName("user_password")[0].value)){
                     alert("Input your Password");
                 }
-                else if(!(document.getElementById("pwre").value)){
-                    alert("Repeat your Password");
+                else{
+                    alert("Register Success!!");
                 }
-                else if(!(document.getElementById("email_auth").value)){
-                    alert("Check your Email-Auth-Code");
-                    var auth = document.getElementById("auth");
-                    auth.style.display = "block";
-                }
+                // else if(!(document.getElementById("user_password_check").value)){
+                //     alert("Repeat your Password");
+                // }
+                // else if(!(document.getElementById("email_auth").value)){
+                //     alert("Check your Email-Auth-Code");
+                //     var auth = document.getElementById("auth");
+                //     auth.style.display = "block";
+                // }
             }
         </script>
     </head>
 
     <body>
         <div th:include="layout/header::header"></div>
+
         <div class="container">
             <div class="page-header">
                 <h1>Register</h1>
             </div>
+            <form method="POST" action="./register">
             <table class="table">
                 <tr>
                     <th style="padding:13px 0 0 15px;">ID</th>
-                    <td><input id="user_id" type="text" class="col-md-1 form-control input-sm" /></td>
+                    <td><input name="user_id"  type="text" class="col-md-1 form-control input-sm" /></td>
                 </tr>
                 <tr>
                     <th style="padding:13px 0 0 15px;">NickName</th>
-                    <td><input id="user_nickname" type="text" class="col-md-1 form-control input-sm" /></td>
+                    <td><input name="user_nickname"  type="text" class="col-md-1 form-control input-sm" /></td>
                 </tr>
                 <tr>
                     <th style="padding:13px 0 0 15px;">Email</th>
-                    <td><input id="user_email" type="text" class="col-md-1 form-control input-sm" /></td>
+                    <td><input name="user_email" type="text" class="col-md-1 form-control input-sm" /></td>
                 </tr>
                 <tr>
                     <th style="padding:13px 0 0 15px;">Password</th>
-                    <td><input id="user_password" type="password" class="col-md-1 form-control input-sm" /></td>
+                    <td><input name="user_password" type="password" class="col-md-1 form-control input-sm" /></td>
                 </tr>
-                <tr>
-                    <th style="padding:13px 0 0 15px;">Password Check</th>
-                    <td><input id="user_password_check" type="password" class="col-md-1 form-control input-sm" /></td>
-                </tr>
+<!--                <tr>-->
+<!--                    <th style="padding:13px 0 0 15px;">Password Check</th>-->
+<!--                    <td><input id="user_password_check" type="password" class="col-md-1 form-control input-sm" /></td>-->
+<!--                </tr>-->
+                <!-- Need Mail-Server
                 <tr>
                     <th style="padding:13px 0 0 15px;">Auth Code</th>
                     <td><input id="user_auth_code" type="text" class="col-md-1 form-control input-sm" /></td>
 
                 </tr>
+                -->
             </table>
             <div class="pull-right">
-                <a class="btn btn-primary" id="register">Register</a>
+-                <input type="submit" class="btn btn-primary" id="register" value="register" onclick=hello()>
             </div>
+<!--            </form>-->
         </div>
         <br><br>
         <div th:include="layout/footer::footer"></div>
