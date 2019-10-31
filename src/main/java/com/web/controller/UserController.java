@@ -27,8 +27,18 @@ public class UserController {
 
     @GetMapping("/user/change")
     public String change(){
-        return  "user/change";
+        return "user/change";
     }
+
+     @PostMapping("/user/change")
+     public String Postchange(@RequestParam("newid") String newID, @RequestParam("id") String id){
+         User user = new User();
+         user.setID(id);
+         user.updateID(newID);
+         userService.UpdateUser(user);
+         return  "user/change";
+     }
+
 
     @GetMapping("/register")
     public String register(Model model){

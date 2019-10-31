@@ -4,4 +4,7 @@
     <insert id="insert" parameterType="String">
         INSERT INTO user (id, nickname, email, password) VALUES (#{id}, #{nickname}, #{email}, #{pw})
     </insert>
+    <update id="update" parameterType="String">
+        UPDATE user SET id=#{newID} WHERE id=#{id}
+    </update>
 </mapper>

@@ -17,6 +17,7 @@ public class User{
     private int idx;
     private String nickname;
     private String id;
+    private String newID;
     private String pw;
     private String email;
     private LocalDateTime createdDate;
@@ -42,7 +43,7 @@ public class User{
         this.email = email;
     }
 
-
+    public void updateID(String newID){ this.newID = newID; }
 
 //    public String getPassword(){
 //        return password;
