@@ -3,16 +3,11 @@ package com.web.controller;
 import com.web.service.UserService;
 import com.web.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.validation.constraints.Null;
-import java.awt.print.Pageable;
 
 @Controller
 public class UserController {
@@ -20,19 +15,19 @@ public class UserController {
     @Autowired
     UserService userService;
 
- //   @GetMapping("/user/info")
-  //  public String info(){
- //       return "user/info";
-  //  }
-
     @GetMapping("/user/info")
-    public String change(Model model, @RequestParam("id") String id){
+    public String info(Model model, @RequestParam("id") String id){
         User user = new User();
         user.setID(id);
         User user1 = userService.SelectUser(user);
         model.addAttribute("list", user1);
-        return "user/change_test";
+        return "user/info";
     }
+
+       @GetMapping("/user/change")
+      public String change(){
+           return "user/change";
+      }
 
      @PostMapping("/user/change")
      public String Postchange(@RequestParam("newid") String newID, @RequestParam("id") String id){

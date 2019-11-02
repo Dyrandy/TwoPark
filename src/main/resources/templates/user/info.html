@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TwoPark UserInfo</title>
+        <title>TwoPark UserInfo Change</title>
         <link rel="stylesheet" th:href="@{/css/base.css}" />
         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+
+        <style>
+            #info input{
+                background-color: white;
+            }
+
+       </style>
     </head>
     <body>
-    <div th:include="layout/header :: header"></div>
-    <div class="container">
-        <div class="page-header">
-            <h1>User Info</h1>
+        <div th:include="layout/header::header"></div>
+        <div class="container">
+            <div class="page-header" id="id">
+                <h1>User Information</h1>
+            </div>
+            <form method="POST" action="/user/change">
+                <table class="table" id="info">
+                    <tr th:each="user : ${list}">
+                        <th style="padding:13px 0 0 15px;">ID</th>
+                        <td><input name="id"  type="text" disabled class="col-md-1 form-control input-sm" th:value="${list.ID}"></td>
+                    </tr>
+                    <tr>
+                        <th style="padding:13px 0 0 15px;">Nickname</th>
+                        <td><input name="newid"  type="text" disabled class="col-md-1 form-control input-sm" th:value="${list.nickname}"></td>
+                    </tr>
+                    <tr>
+                        <th style="padding:13px 0 0 15px;">Email</th>
+                        <td><input name="newid"  type="text" disabled class="col-md-1 form-control input-sm" th:value="${list.email}"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
-    </div>
-    <!--        It Will Be Changed! Just Mapping TEST-->
-    <div th:include="layout/footer :: footer"></div>
+        <div th:include="layout/footer::footer"></div>
     </body>
 </html>
