@@ -20,14 +20,18 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/user/info")
-    public String info(){
-        return "user/info";
-    }
+ //   @GetMapping("/user/info")
+  //  public String info(){
+ //       return "user/info";
+  //  }
 
-    @GetMapping("/user/change")
-    public String change(){
-        return "user/change";
+    @GetMapping("/user/info")
+    public String change(Model model, @RequestParam("id") String id){
+        User user = new User();
+        user.setID(id);
+        User user1 = userService.SelectUser(user);
+        model.addAttribute("list", user1);
+        return "user/change_test";
     }
 
      @PostMapping("/user/change")
@@ -37,6 +41,15 @@ public class UserController {
          user.updateID(newID);
          userService.UpdateUser(user);
          return  "user/change";
+     }
+
+
+     @GetMapping("/user/delete")
+     public String DeleteUser(@RequestParam("id") String id){
+        User user = new User();
+        user.setID(id);
+        userService.DeleteUser(user);
+        return "index";
      }
 
 

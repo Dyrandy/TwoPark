@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TwoPark UserInfo Change</title>
+        <link rel="stylesheet" th:href="@{/css/base.css}" />
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<!--        <link rel="stylesheet" th:href="@{/css/changeinfo.css}" />-->
+<!--        <style>-->
+<!--            .container{-->
+<!--                text-align: center;-->
+<!--            }-->
+<!--            #id{-->
+<!--                text-align: left;-->
+<!--            }-->
+
+<!--        </style>-->
+    </head>
+    <body>
+        <div th:include="layout/header::header"></div>
+        <div class="container">
+            <div class="page-header" id="id">
+                <h1>User Information Change</h1>
+            </div>
+            <form method="POST" action="/user/change">
+                <table class="table">
+                    <tr>
+                        <th style="padding:13px 0 0 15px;">ID</th>
+                        <td><input name="id"  type="text" class="col-md-1 form-control input-sm" /></td>
+                    </tr>
+                    <tr>
+                        <th style="padding:13px 0 0 15px;">Change ID</th>
+                        <td><input name="newid"  type="text" class="col-md-1 form-control input-sm" /></td>
+                    </tr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr th:each="user : ${list}">
+                            <td th:text="${list.ID}"></td>
+                            <td th:text="${list.nickname}"></td>
+                            <td th:text="${list.email}"></td>
+                            <td th:text="${list.getPW()}"></td>
+                    </tr>
+                    <!--                        TEST-->
+                    <!--                    <tr>-->
+<!--                        <th style="padding:13px 0 0 15px;">NickName</th>-->
+<!--                        <td><input name="user_nickname"  type="text" class="col-md-1 form-control input-sm" /></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th style="padding:13px 0 0 15px;">Email</th>-->
+<!--                        <td><input name="user_email" type="text" class="col-md-1 form-control input-sm" /></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th style="padding:13px 0 0 15px;">Password</th>-->
+<!--                        <td><input name="user_password" type="password" class="col-md-1 form-control input-sm" /></td>-->
+<!--                    </tr>-->
+                    <!--                <tr>-->
+                    <!--                    <th style="padding:13px 0 0 15px;">Password Check</th>-->
+                    <!--                    <td><input id="user_password_check" type="password" class="col-md-1 form-control input-sm" /></td>-->
+                    <!--                </tr>-->
+                    <!-- Need Mail-Server
+                    <tr>
+                        <th style="padding:13px 0 0 15px;">Auth Code</th>
+                        <td><input id="user_auth_code" type="text" class="col-md-1 form-control input-sm" /></td>
+
+                    </tr>
+                    -->
+                </table>
+                <div class="pull-right">
+                    <input type="submit" class="btn btn-primary" id="register" value="register">
+                </div>
+            </form>
+        </div>
+        <div th:include="layout/footer::footer"></div>
+    </body>
+</html>

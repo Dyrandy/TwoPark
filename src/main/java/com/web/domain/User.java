@@ -18,7 +18,7 @@ public class User{
     private String nickname;
     private String id;
     private String newID;
-    private String pw;
+    private String password;
     private String email;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
@@ -32,7 +32,7 @@ public class User{
     }
 
     public void setPW(String pw){
-        this.pw = pw;
+        this.password = pw;
     }
 
     public void setNickname(String nickname){
@@ -45,6 +45,13 @@ public class User{
 
     public void updateID(String newID){ this.newID = newID; }
 
+    public String getNickname() { return nickname; }
+
+    public String getID() { return id; }
+
+    public String getEmail() { return email; }
+
+    public String getPW() { return password; }
 //    public String getPassword(){
 //        return password;
 //    }

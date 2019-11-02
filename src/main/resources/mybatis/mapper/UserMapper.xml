@@ -7,4 +7,10 @@
     <update id="update" parameterType="String">
         UPDATE user SET id=#{newID} WHERE id=#{id}
     </update>
+    <delete id="delete" parameterType="String">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+    <select id="select" resultType="com.web.domain.User" parameterType="String">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
 </mapper>
