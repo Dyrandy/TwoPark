@@ -52,6 +52,7 @@ public class User{
     public String getEmail() { return email; }
 
     public String getPW() { return password; }
+
 //    public String getPassword(){
 //        return password;
 //    }

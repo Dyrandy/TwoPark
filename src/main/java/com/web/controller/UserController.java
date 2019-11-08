@@ -24,7 +24,7 @@ public class UserController {
         return "user/info";
     }
 
-       @GetMapping("/user/change")
+    @GetMapping("/user/change")
       public String change(){
            return "user/change";
       }

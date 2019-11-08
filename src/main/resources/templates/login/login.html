@@ -14,19 +14,22 @@
     <div class="page-header">
         <h1>Login</h1>
     </div>
+    <form method="POST" action="./login">
     <table class="table">
         <tr>
             <th style="padding:13px 0 0 15px;">ID</th>
-            <td><input id="id" type="text" class="col-md-1 form-control input-sm" /></td>
+            <td><input name="user_id" type="text" class="col-md-1 form-control input-sm" /></td>
         </tr>
         <tr>
             <th style="padding:13px 0 0 15px;">Password</th>
-            <td><input id="pw" type="password" class="col-md-1 form-control input-sm" /></td>
+            <td><input name="user_password" type="password" class="col-md-1 form-control input-sm" /></td>
         </tr>
     </table>
     <div class="pull-right">
-        <a class="btn btn-primary" id="login">login</a>
+        <input type="submit" class="btn btn-primary" id="login" value="login" />
     </div>
+    </form>
+
 
     <br><br><br><br>
 
@@ -35,26 +38,7 @@
 <div th:replace="layout/footer::footer"></div>
 <script th:src="@{/js/jquery.min.js}"></script>
 <script>
-    $('#login').click(function() {
-        var jsonData = JSON.stringify({
-            id: $('#id').val(),
-            pw: $('#pw').val()
-        });
-        $.ajax({
-            url: "http://localhost:8081/api/boards",
-            type: "POST",
-            data: jsonData,
-            contentType: "application/json",
-            dataType: "json",
-            success: function() {
-                alert('Login Success!');
-                location.href = '/board/list';
-            },
-            error: function() {
-                alert('Login Failed');
-            }
-        });
-    });
+
 </script>
 
 </body>
